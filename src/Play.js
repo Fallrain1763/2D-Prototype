@@ -24,8 +24,14 @@ class Play extends Phaser.Scene {
     }
   
     update() {
-      this.flashlight.x=this.input.x;
-      this.flashlight.y=this.input.y;
+        if(this.input.x>=0&&this.input.x<=game.config.width){
+            this.flashlight.x=this.input.x;
+        }
+     
+      if(this.input.y>=0&&this.input.y<=game.config.height){
+             this.flashlight.y=this.input.y;      
+      }
+      
     }
   }
   
