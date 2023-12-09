@@ -19,12 +19,14 @@ class Play extends Phaser.Scene {
 
         // Game Start
         this.gameStarted = false;
+        let start = 
         this.add.text(game.config.width/2, game.config.height/2, 'START')
             .setOrigin(0.5, 0.5)
             .setStyle({ fontSize: 10 })
             .setInteractive()
             .on('pointerdown', () => {
                 this.gameStarted = true
+                start.setVisible(false);
             });
 
         // add art sprites here! (use prefab)
