@@ -54,24 +54,24 @@ class Play extends Phaser.Scene {
         this.flashlight = 
         this.add.sprite(game.config.width/2, game.config.height/2, 'light')
                 .setOrigin(0.5, 0.5)
-                              
-                              
+                                                      
     }
   
     update() {
       
-        if(this.input.x >= 0 &&
-           this.input.x <= game.config.width && 
-           this.gameStarted == true){
-            this.flashlight.x=this.input.x;
-        }
+      if(this.input.x >= 0 &&
+          this.input.x <= game.config.width && 
+          this.gameStarted == true){
+          this.flashlight.x=this.input.x;
+      }
      
       if(this.input.y >= 0 &&
          this.input.y <= game.config.height &&
          this.gameStarted == true){
              this.flashlight.y=this.input.y;      
       }
-      if(this.gameStarted==true){
+
+      if(this.gameStarted == true){
         this.art1a.update()
         this.art1b.update()
         this.art1c.update()
@@ -90,7 +90,6 @@ class Play extends Phaser.Scene {
         this.art4d.update()
       }
         
-      
     }
   }
   
