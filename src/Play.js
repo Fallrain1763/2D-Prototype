@@ -40,12 +40,12 @@ class Play extends Phaser.Scene {
         this.art2c = new Art(this, 30, 150, 'p2').setOrigin(0,0.5)
 
         this.art3a = new Art(this, 100, 200, 'p3').setOrigin(0,0.5)
-        this.art3a = new Art(this, 220, 100, 'p3').setOrigin(0,0.5)
+        this.art3b = new Art(this, 220, 100, 'p3').setOrigin(0,0.5)
 
         this.art4a = new Art(this, 90, 80, 'p4').setOrigin(0.5,0.5)
-        this.art4a = new Art(this, 190, 70, 'p4').setOrigin(0.5,0.5)
-        this.art4a = new Art(this, 180, 160, 'p4').setOrigin(0.5,0.5)
-        this.art4a = new Art(this, 80, 160, 'p4').setOrigin(0.5,0.5)
+        this.art4b = new Art(this, 190, 70, 'p4').setOrigin(0.5,0.5)
+        this.art4c = new Art(this, 180, 160, 'p4').setOrigin(0.5,0.5)
+        this.art4d = new Art(this, 80, 160, 'p4').setOrigin(0.5,0.5)
 
             
         //add the rest and update placement
@@ -71,7 +71,25 @@ class Play extends Phaser.Scene {
          this.gameStarted == true){
              this.flashlight.y=this.input.y;      
       }
-      
+      if(this.gameStarted==true){
+        this.art1a.update()
+        this.art1b.update()
+        this.art1c.update()
+        this.art1d.update()
+
+        this.art2a.update()
+        this.art2b.update()
+        this.art2c.update()
+
+        this.art3a.update()
+        this.art3b.update()
+
+        this.art4a.update()
+        this.art4b.update()
+        this.art4c.update()
+        this.art4d.update()
+      }
+        
       
     }
   }
